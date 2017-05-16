@@ -32,8 +32,8 @@ ext {
             animatedGif          : "com.facebook.fresco:animated-gif:${dependVersion.fresco}",  
   
             // ------------- RxAndroid -------------  
-            rxJava               : "io.reactivex:rxjava:${dependVersion.rxjava}", 
-            rxAndroid            : "io.reactivex:rxandroid:${dependVersion.rxandroid}",
+            rxJava               : "io.reactivex:rxjava2:${dependVersion.rxjava}", 
+            rxAndroid            : "io.reactivex:rxandroid2:${dependVersion.rxandroid}",
 
             ultraptr            : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}"
   
