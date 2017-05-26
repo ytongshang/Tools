@@ -14,7 +14,7 @@ ext {
             rxandroid : "2.0.1",
             okhttp : "3.7.0",
             fresco :"1.3.0",
-            ultraptr : "1.0.11"
+            ultraptr : "1.0.11",
             rancune_commons : "1.0.0"
     ]  
   
@@ -36,7 +36,7 @@ ext {
             rxJava               : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}", 
             rxAndroid            : "io.reactivex.rxjava2:rxandroid:${dependVersion.rxandroid}",
 
-            ultraptr            : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}"
+            ultraptr            : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}",
 
             rancune_commons :"cradle.rancune:commons:${dependVersion.rancune_commons}"
   
