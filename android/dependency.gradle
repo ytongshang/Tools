@@ -26,6 +26,7 @@ ext {
             appcompatV7          : "com.android.support:appcompat-v7:${dependVersion.support}",  
             design               : "com.android.support:design:${dependVersion.support}",  
             recyclerview         : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            annotations         : "com.android.support:support-annotations:${dependVersion.support}",
   
             // ------------- 网络请求 -------------  
             okhttp               : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",  
