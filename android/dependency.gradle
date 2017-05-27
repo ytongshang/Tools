@@ -15,8 +15,9 @@ ext {
             okhttp : "3.7.0",
             fresco :"1.3.0",
             ultraptr : "1.0.11",
-            rancune_commons : "1.0.0",
-            rancune_http : "1.0.0"
+            commons_core : "1.0.0",
+            commons_rx : "1.0.0",
+            commons_http : "1.0.0",
     ]  
   
     dependencies = [  
@@ -39,8 +40,12 @@ ext {
 
             ultraptr            : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}",
 
-            rancune_commons :"cradle.rancune:commons:${dependVersion.rancune_commons}",
-            rancune_http :"cradle.rancune.commons:http:${dependVersion.rancune_http}"
+
+            commons_core :"cradle.rancune.commons:core:${dependVersion.commons_core}",
+
+            commons_rx :"cradle.rancune.commons:rx:${dependVersion.commons_rx}",
+
+            commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}"
   
     ]  
 } 
