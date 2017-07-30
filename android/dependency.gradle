@@ -18,6 +18,7 @@ ext {
             commons_core : "0.0.1",
             commons_rx : "1.0.0",
             commons_http : "1.0.0",
+            commons_utils : "1.0.0"
     ]  
   
     dependencies = [  
@@ -46,7 +47,9 @@ ext {
 
             commons_rx :"cradle.rancune.commons:rx:${dependVersion.commons_rx}",
 
-            commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}"
+            commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}",
+
+             commons_utils :"cradle.rancune.commons:utils:${dependVersion.commons_utils}"
   
     ]  
 } 
