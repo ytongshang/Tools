@@ -16,9 +16,9 @@ ext {
             fresco :"1.3.0",
             ultraptr : "1.0.11",
             commons_core : "0.0.1",
-            commons_rx : "1.0.0",
+            commons_rxjava : "1.0.0",
             commons_http : "1.0.0",
-            commons_utils : "1.0.1"
+            commons_util : "1.0.0"
     ]  
   
     dependencies = [  
@@ -45,11 +45,11 @@ ext {
 
             commons_core :"cradle.rancune.commons:core:${dependVersion.commons_core}",
 
-            commons_rx :"cradle.rancune.commons:rx:${dependVersion.commons_rx}",
+            commons_rxjava :"cradle.rancune.commons:rxjava:${dependVersion.commons_rxjava}",
 
             commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}",
 
-             commons_utils :"cradle.rancune.commons:utils:${dependVersion.commons_utils}"
+            commons_util :"cradle.rancune.commons:util:${dependVersion.commons_util}"
   
     ]  
 } 
