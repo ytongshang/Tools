@@ -18,7 +18,7 @@ ext {
             commons_core : "0.0.1",
             commons_rx : "1.0.0",
             commons_http : "1.0.0",
-            commons_utils : "1.0.0"
+            commons_utils : "1.0.1"
     ]  
   
     dependencies = [  
