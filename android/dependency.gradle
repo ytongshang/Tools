@@ -43,9 +43,9 @@ ext {
             ultraptr            : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}",
 
 
-            commons_core :"cradle.rancune.commons:core:${dependVersion.commons_core}",
-            commons_rxjava :"cradle.rancune.commons:rxjava:${dependVersion.commons_rxjava}",
-            commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}",
-            commons_toolkit :"cradle.rancune.commons:http:${dependVersion.commons_toolkit}",
+            commons_core :"cradle.rancune.commons:core:${dependVersion.commons_core}" + "@aar",
+            commons_rxjava :"cradle.rancune.commons:rxjava:${dependVersion.commons_rxjava}"+ "@aar",
+            commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}"+ "@aar",
+            commons_toolkit :"cradle.rancune.commons:http:${dependVersion.commons_toolkit}"+ "@aar",
     ]  
 } 
