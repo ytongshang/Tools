@@ -16,7 +16,7 @@ ext {
             okhttp : "3.7.0",
             fresco :"1.3.0",
             ultraptr : "1.0.11",
-            commons_core : "1.0.1",
+            commons_core : "1.0.2",
             commons_rxjava : "1.0.0",
             commons_http : "1.0.0",
             commons_toolkit : "1.0.0",
