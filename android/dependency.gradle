@@ -14,8 +14,10 @@ ext {
             rxjava : "2.1.0",
             rxandroid : "2.0.1",
             okhttp : "3.7.0",
+            retrofit : "2.3.0",
             fresco :"1.3.0",
             ultraptr : "1.0.11",
+            adapter-rxjava2 ："latest.version",
             commons_core : "1.0.2",
             commons_rxjava : "1.0.0",
             commons_http : "1.0.0",
@@ -28,12 +30,14 @@ ext {
             appcompatV7          : "com.android.support:appcompat-v7:${dependVersion.support}",  
             design               : "com.android.support:design:${dependVersion.support}",  
             recyclerview         : "com.android.support:recyclerview-v7:${dependVersion.support}",
-            annotations         : "com.android.support:support-annotations:${dependVersion.support}",
-            constraint          :"com.android.support.constraint:constraint-layout:${dependVersion.constraint}",
+            annotations          : "com.android.support:support-annotations:${dependVersion.support}",
+            constraint           :"com.android.support.constraint:constraint-layout:${dependVersion.constraint}",
   
             // ------------- 网络请求 -------------  
             okhttp               : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",  
-  
+            retrofit             : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            adapter-rxjava2      : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter-rxjava2}",
+            
             // ------------- 图片加载 -------------  
             fresco               : "com.facebook.fresco:fresco:${dependVersion.fresco}",  
             animatedGif          : "com.facebook.fresco:animated-gif:${dependVersion.fresco}",  
@@ -42,7 +46,7 @@ ext {
             rxJava               : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}", 
             rxAndroid            : "io.reactivex.rxjava2:rxandroid:${dependVersion.rxandroid}",
 
-            ultraptr            : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}",
+            ultraptr             : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}",
 
 
             commons_core :"cradle.rancune.commons:core:${dependVersion.commons_core}" + "@aar",
