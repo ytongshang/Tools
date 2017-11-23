@@ -15,7 +15,7 @@ ext {
             rxandroid : "2.0.1",
             okhttp : "3.7.0",
             retrofit : "2.3.0",
-            adapter-rxjava2 ："2.3.0",
+            adapter_rxjava2 : "2.3.0",
             fresco :"1.3.0",
             ultraptr : "1.0.11",
             commons_core : "1.0.2",
