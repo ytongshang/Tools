@@ -15,7 +15,7 @@ ext {
             rxandroid : "2.0.1",
             okhttp : "3.7.0",
             retrofit : "2.3.0",
-            adapter-rxjava2 : "2.3.0",
+            adapter_rxjava2 : "2.3.0",
             fresco :"1.3.0",
             ultraptr : "1.0.11",
             commons_core : "1.0.2",
@@ -34,12 +34,12 @@ ext {
             constraint           :"com.android.support.constraint:constraint-layout:${dependVersion.constraint}",
   
             // ------------- 网络请求 -------------  
-            okhttp               : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",  
+            okhttp               : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
             retrofit             : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
-            adapter_rxjava2      : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter-rxjava2}",
+            adapter_rxjava2      : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter_rxjava2}",
             
             // ------------- 图片加载 -------------  
-            fresco               : "com.facebook.fresco:fresco:${dependVersion.fresco}",  
+            fresco               : "com.facebook.fresco:fresco:${dependVersion.fresco}",
             animatedGif          : "com.facebook.fresco:animated-gif:${dependVersion.fresco}",  
   
             // ------------- RxAndroid -------------  
