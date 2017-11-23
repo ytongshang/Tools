@@ -36,7 +36,7 @@ ext {
             // ------------- 网络请求 -------------  
             okhttp               : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",  
             retrofit             : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
-            adapter-rxjava2      : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter-rxjava2}",
+            adapter-rxjava2      : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter_rxjava2}",
             
             // ------------- 图片加载 -------------  
             fresco               : "com.facebook.fresco:fresco:${dependVersion.fresco}",  
