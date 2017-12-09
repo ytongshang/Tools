@@ -1,57 +1,93 @@
-ext {  
-    android = [  
-            minSdkVersion    : 14,
-            targetSdkVersion : 26,
-            compileSdkVersion: 26,  
-            buildToolsVersion: "26.0.2",  
-            versionCode      : 1,  
-            versionName      : "1.0"  
-    ]  
-  
-    dependVersion = [  
-            constraint:"1.0.2",
-            support: "25.3.1",
-            rxjava : "2.1.0",
-            rxandroid : "2.0.1",
-            okhttp : "3.7.0",
-            retrofit : "2.3.0",
-            adapter_rxjava2 : "2.3.0",
-            fresco :"1.3.0",
-            ultraptr : "1.0.11",
-            commons_core : "1.0.3",
-            commons_rxjava : "1.0.0",
-            commons_http : "1.0.0",
-            commons_toolkit : "1.0.0",
-    ]  
-  
-    dependencies = [  
-            // ------------- Android -------------  
-            supportV4            : "com.android.support:support-v4:${dependVersion.support}",  
-            appcompatV7          : "com.android.support:appcompat-v7:${dependVersion.support}",  
-            design               : "com.android.support:design:${dependVersion.support}",  
-            recyclerview         : "com.android.support:recyclerview-v7:${dependVersion.support}",
-            annotations          : "com.android.support:support-annotations:${dependVersion.support}",
-            constraint           :"com.android.support.constraint:constraint-layout:${dependVersion.constraint}",
-  
-            // ------------- 网络请求 -------------  
-            okhttp               : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
-            retrofit             : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
-            adapter_rxjava2      : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter_rxjava2}",
-            
-            // ------------- 图片加载 -------------  
-            fresco               : "com.facebook.fresco:fresco:${dependVersion.fresco}",
-            animatedGif          : "com.facebook.fresco:animated-gif:${dependVersion.fresco}",  
-  
-            // ------------- RxAndroid -------------  
-            rxJava               : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}", 
-            rxAndroid            : "io.reactivex.rxjava2:rxandroid:${dependVersion.rxandroid}",
+ext {
+    commonCompiles = this.&commonCompiles
+    printErr = System.err.&println
 
-            ultraptr             : "in.srain.cube:ultra-ptr:${dependVersion.ultraptr}",
+    minSdkVersion = 14
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.2"
+    versionCode = 1
+    versionName = "1.0"
 
+    support = "25.3.1"
+    constraint = "1.0.2"
+    multidex = '1.0.1'
 
-            commons_core :"cradle.rancune.commons:core:${dependVersion.commons_core}" + "@aar",
-            commons_rxjava :"cradle.rancune.commons:rxjava:${dependVersion.commons_rxjava}"+ "@aar",
-            commons_http :"cradle.rancune.commons:http:${dependVersion.commons_http}"+ "@aar",
-            commons_toolkit :"cradle.rancune.commons:http:${dependVersion.commons_toolkit}"+ "@aar",
-    ]  
-} 
+    rxjava2 = "2.1.0"
+    rxandroid2 = "2.0.1"
+
+    okhttp3 = "3.7.0"
+    retrofit2 = "2.3.0"
+    adapter_rxjava2 = "2.3.0"
+
+    fresco = "1.3.0"
+
+    gif = '1.2.1'
+
+    ultraptr = "1.0.11"
+
+    commons_core = "1.0.3"
+    commons_rxjava = "1.0.0"
+    commons_http = "1.0.0"
+    commons_toolkit = "1.0.0"
+}
+
+def commonCompiles(String... libs) {
+    printErr "commonCompiles start"
+    if (null == libs) {
+        return null
+    }
+
+    libs.each {
+        println "compile library : " + it
+        if (it == 'appcompat-v7') {
+            dependencies.compile "com.android.support:appcompat-v7:${ext.support}"
+        } else if (it == 'recyclerview-v7') {
+            dependencies.compile "com.android.support:recyclerview-v7:${ext.support}"
+        } else if (it == 'design') {
+            dependencies.compile "com.android.support:design:${ext.support}"
+        } else if (it == 'annotations') {
+            dependencies.compile "com.android.support:support-annotations:${ext.support}"
+        } else if (it == 'multidex') {
+            dependencies.compile "com.android.support:multidex:${ext.multidex}"
+        } else if (it == 'constraint') {
+            dependencies.compile "com.android.support.constraint:constraint-layout:${ext.constraint}"
+        } else if (it == 'rxjava2') {
+            dependencies.compile("io.reactivex.rxjava2:rxjava:${ext.rxjava2}")
+        } else if (it == 'rxandroid2') {
+            dependencies.compile("io.reactivex.rxjava2:rxandroid:${ext.rxandroid2}", {
+                exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+            })
+        } else if (it == 'okhttp3') {
+            dependencies.compile "com.squareup.okhttp3:okhttp:${ext.okhttp3}"
+        } else if (it == 'retrofit2') {
+            dependencies.compile("com.squareup.retrofit2:retrofit:${ext.retrofit2}", {
+                exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+            })
+        } else if (it == 'adapter-rxjava2') {
+            dependencies.compile("com.squareup.retrofit2:adapter-rxjava2:${ext.adapter_rxjava2}", {
+                exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+                exclude group: 'com.squareup.retrofit2', module: 'retrofit'
+            })
+        } else if (it == 'ultra-ptr') {
+            dependencies.compile "in.srain.cube:ultra-ptr:${ext.ultraptr}"
+        } else if (it == 'fresco') {
+            dependencies.compile "com.facebook.fresco:fresco:${ext.fresco}"
+            dependencies.compile "com.facebook.fresco:animated-base:${ext.fresco}"
+            dependencies.compile "com.facebook.fresco:imagepipeline-okhttp3:${ext.fresco}"
+            dependencies.compile "com.facebook.fresco:animated-gif:${ext.fresco}"
+        } else if (it == 'gif') {
+            dependencies.compile "pl.droidsonroids.gif:android-gif-drawable:${ext.gif}"
+        } else if (it == 'commons_core') {
+            dependencies.compile "cradle.rancune.commons:core:${ext.commons_core}"
+        } else if (it == 'commons_toolkit') {
+            dependencies.compile "cradle.rancune.commons:toolkit:${ext.commons_toolkit}"
+        } else if (it == 'commons_rxjava') {
+            dependencies.compile "cradle.rancune.commons:rxjava:${ext.commons_rxjava}"
+        } else if (it == 'commons_http') {
+            dependencies.compile "cradle.rancune.commons:http:${ext.commons_http}"
+        }
+
+    }
+    printErr "commonCompiles finish"
+}
