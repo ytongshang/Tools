@@ -26,10 +26,11 @@ ext {
 
     ultraptr = "1.0.11"
 
-    commons_core = "1.1.2"
+    commons_core = "1.0.0"
     commons_rxjava = "1.0.0"
     commons_http = "1.0.0"
     commons_toolkit = "1.0.0"
+    widget_ninepatch = "1.0.0"
 }
 
 def commonCompiles(String... libs) {
