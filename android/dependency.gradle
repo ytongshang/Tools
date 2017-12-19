@@ -86,7 +86,7 @@ def commonCompiles(String... libs) {
         } else if (it == 'commons_rxjava') {
             dependencies.compile "cradle.rancune.commons:rxjava:${ext.commons_rxjava}"
         } else if (it == 'commons_http') {
-            dependencies.compile "cradle.rancune.commons:http-retrofit:${ext.commons_http}"
+            dependencies.compile "cradle.rancune.commons:http:${ext.commons_http}"
         }
 
     }
