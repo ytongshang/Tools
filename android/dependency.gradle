@@ -29,7 +29,7 @@ ext {
     commons_core = "1.0.1"
     commons_rxjava = "1.0.0"
     commons_http = "1.0.0"
-    commons_toolkit = "1.0.0"
+    commons_toolkit = "1.0.1"
     widget_ninepatch = "1.0.0"
 }
 
