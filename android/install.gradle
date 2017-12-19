@@ -2,8 +2,6 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group = GROUP
 
-project.archivesBaseName = POM_ARTIFACT_ID
-
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
