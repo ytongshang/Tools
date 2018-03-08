@@ -3,13 +3,13 @@ ext {
     printErr = System.err.&println
 
     minSdkVersion = 14
-    targetSdkVersion = 27
-    compileSdkVersion = 27
+    targetSdkVersion = 26
+    compileSdkVersion = 26
     buildToolsVersion = "27.0.3"
     versionCode = 1
     versionName = "1.0"
 
-    support = "25.3.1"
+    support = "26.1.0"
     constraint = "1.0.2"
     multidex = '1.0.1'
 
