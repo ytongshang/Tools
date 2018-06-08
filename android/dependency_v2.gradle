@@ -13,7 +13,11 @@ ext {
     constraint = "1.0.2"
     multidex = '1.0.1'
 
+<<<<<<< HEAD
     rxjava2 = "2.1.14"
+=======
+    rxjava2 = "2.1.12"
+>>>>>>> e1e6a4bba1bfa282940df68038953dd0c129d797
     rxandroid2 = "2.0.2"
 
     okhttp3 = "3.10.0"
