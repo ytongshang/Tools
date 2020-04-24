@@ -102,15 +102,37 @@ def copy_webp_files(sourceDir, targetDir):
         os.makedirs(targetDir)
     for file in os.listdir(sourceDir):
         new_source_path = os.path.join(sourceDir, file)
-        new_target_path = os.path.join(targetDir, file)
         if os.path.isdir(new_source_path):
+            new_target_path = os.path.join(targetDir, file)
             copy_webp_files(new_source_path, new_target_path)
         else:
             splite_name = os.path.splitext(file)
-            if splite_name[1] != ".webp":
+            if splite_name[1] == ".webp":
                 continue
-            shutil.copy(new_source_path, new_target_path)
-            os.remove(new_source_path)
+            print("###############################################")
+            copyName = file
+            copyPath = new_source_path
+            originSize = os.path.getsize(new_source_path)
+            print(new_source_path + " originSize:" + str(originSize))
+            webpName = splite_name[0] + ".webp"
+            webpPath = os.path.join(sourceDir, webpName)
+            isWebpExist = False
+            if os.path.exists(webpPath):
+                webpSize = os.path.getsize(webpPath)
+                isWebpExist = True
+                print(webpPath + " webpSize:" + str(webpSize))
+                if webpSize < originSize:
+                    copyName = webpName
+                    copyPath = webpPath
+                    print("webp格式小于原图大小，选择webp")
+                else:
+                    copyName = file
+                    copyPath = new_source_path
+                    print("原图小于webp，选择原图")
+            new_target_path = os.path.join(targetDir, copyName)
+            shutil.copy(copyPath, new_target_path)
+            if isWebpExist:
+                os.remove(webpPath)
 
 
 if __name__ == '__main__':
